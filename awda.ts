@@ -30,7 +30,7 @@ const employee = new Employee("John", "Doe", 30, 12345);
 
 // Use type inference
 let manager = {
-    name: "Jane Smith",
+    name: "Jane Smithh",
     department: "IT",
     yearsOfExperience: 8
 };
