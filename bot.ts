@@ -1,22 +1,8 @@
-import {
-    Client,
-    Message,
-    GatewayIntents
-  } from 'https://deno.land/x/harmony@v2.8.0/mod.ts'
-  
-  const client = new Client({
-    intents: [
-      'GUILDS',
-      'DIRECT_MESSAGES',
-      'GUILD_MESSAGES'
-    ],
-    // token: optionally specify, otherwise DISCORD_TOKEN from env is used
-  })
-  
-  // Listen for event when client is ready (Identified through gateway / Resumed)
-  client.on('ready', () => {
-    console.log(`Ready! User: ${client.user?.tag}`)
-  })
-  
-  // Connect to gateway
-  client.connect()
+import * as slash from "https://code.harmony.rocks/v2.0.0/deploy";
+
+// Pick up TOKEN and PUBLIC_KEY from ENV.
+slash.init({ env: true });
+// Handle for any other commands received.
+slash.handle("*", (d) => d.reply("Unhandled Command", { ephemeral: true }));
+// Log all errors.
+slash.client.on("interactionError", console.error);
