@@ -2,7 +2,7 @@ import {
     Client,
     Message,
     GatewayIntents
-  } from 'https://deno.land/x/harmony@v2.6.1/mod.ts'
+  } from 'https://deno.land/x/harmony@v2.8.0/mod.ts'
   
   const client = new Client({
     intents: [
