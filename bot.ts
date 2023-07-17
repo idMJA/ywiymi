@@ -23,3 +23,11 @@ slash.register(
         d.reply("Pong!");
     }
 );
+
+// Handle for commands created/deleted.
+slash.client.on("interactionCreate", async (interaction) => {
+    if (!interaction.isCommand()) return;
+    if (interaction.commandName === "ping") {
+        await interaction.reply("Pong!");
+    }
+}
