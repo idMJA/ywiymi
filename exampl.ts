@@ -64,3 +64,8 @@ interface User {
   //         d.reply("Pong!");
   //     }
   // );
+  interface User {
+      name: string;
+      id: number;
+  }
+  
