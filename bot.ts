@@ -1,4 +1,4 @@
-import * as slash from "https://code.harmony.rocks/v2.0.0/deploy";
+import * as slash from "https://deno.land/x/slash_commands@v2.0.0/mod.ts";
 
 // Pick up TOKEN and PUBLIC_KEY from ENV.
 slash.init({ env: true });
